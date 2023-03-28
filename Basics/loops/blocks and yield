@@ -30,3 +30,13 @@ end
 test{
    |s,i|  puts "hi u are in block #{i} == #{s} "
 }
+
+
+#codes of passing A block to a method with out yield
+
+def test(&add) 
+    add.call    
+end
+test{
+    puts "hello "
+}

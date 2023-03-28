@@ -1,0 +1,20 @@
+# .. means it prints upto range 0 to n
+#... means it prints uptob range 0 to n-1
+
+for i in 0..5
+    puts "i value is #{i}"
+end
+
+
+#alternate method
+
+=begin
+(range).each do |variable name|
+codes
+end
+=end
+
+
+(0...5).each do |i|
+    puts "value of local varible i=#{i}"
+end

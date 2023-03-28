@@ -1,0 +1,20 @@
+#Blocks must have same name as function name and yield to call that block
+
+
+#Blocks with out parameters
+def  test()
+    puts "hi in test"
+    yield
+end
+test{
+    puts "hi u are in block "
+}
+
+#Blocks with parameters
+def  test()
+    puts "hi in test"
+    yield 5
+end
+test{
+   |i|  puts "hi u are in block #{i}"
+}

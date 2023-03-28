@@ -1,0 +1,27 @@
+#define_method
+
+
+class Myclass
+def self.create_new_method(method_name,&block)
+define_method(method_name,&block)
+end 
+end 
+
+Myclass.create_new_method("say_hello") do 
+    puts "hello from block "
+end 
+Myclass.new.say_hello
+
+
+#Alternate Way
+
+class Myclass
+    def self.create(method_name)
+        define_method(method_name) do 
+            puts "hello from #{method_name}"
+    end 
+end 
+end 
+
+Myclass.create(:hello_world)
+Myclass.new.hello_world

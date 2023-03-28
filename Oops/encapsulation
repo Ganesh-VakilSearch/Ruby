@@ -1,29 +1,56 @@
-# Ruby program to illustrate encapsulation	
-class Demoencapsulation
-		
-def initialize(id, name, addr)
-		
-# Instance Variables	
-@cust_id = id
-@cust_name = name
-@cust_addr = addr
-end
-	
-# displaying result
-def display_details()
-puts "Customer id: #@cust_id"
-puts "Customer name: #@cust_name"
-puts "Customer address: #@cust_addr"
-end
-end
-	
-# Create Objects
-cust1 = Demoencapsulation .new("1", "Mike",
-			"Wisdom Apartments, Ludhiya")
+class Box 
+    def initialize(l,b)
+    @length=l 
+    @breadth=b
+end 
 
-cust2 = Demoencapsulation .new("2", "Jackey",
-				"New Empire road, Khandala")
-	
-# Call Methods
-cust1.display_details()
-cust2.display_details()
+#setters
+    def setLength=(l)
+        @length=l 
+    end 
+def setBreadth=(b)
+     @breadth=b
+end 
+
+#getters
+def dislength
+    return @length
+end 
+
+def disBreadth
+    return @breadth
+end 
+
+def display
+    return @length * @breadth
+
+end
+end 
+
+box=Box.new(1,5)
+
+box.setLength=10 
+box.setBreadth=100
+
+puts "The box size is #{box.display}"
+
+
+
+#Using attr_ancestor for both getter and reader
+#using attr_reader for getter
+#using attr_writer for setter
+
+class Box 
+    def initialize(l,b)
+        @l=l
+        @b=b
+    end 
+    attr_accessor:width,:height #getter and setter
+end 
+
+box=Box.new(1,5)
+
+box.width=10 
+box.height=100
+
+puts box.width*box.height

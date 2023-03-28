@@ -40,3 +40,13 @@ end
 test{
     puts "hello "
 }
+
+
+#codes of passing A block to a method 
+#it prints hello 3 times
+def test(&add) 
+    3.times do (add.call) end   
+end
+test{
+    puts "hello "
+}

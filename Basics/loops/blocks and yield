@@ -18,3 +18,15 @@ end
 test{
    |i|  puts "hi u are in block #{i}"
 }
+
+
+#Blocks with two  parameters
+
+def  test()
+    puts "start hi in test"
+    yield("hello",5)
+    puts "end of the block"
+end
+test{
+   |s,i|  puts "hi u are in block #{i} == #{s} "
+}

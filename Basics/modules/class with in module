@@ -1,0 +1,18 @@
+ module Mymodule
+    class Test
+        
+        def initialize 
+            puts "constructer"
+        end 
+        
+        def mymethod
+            puts "It is a user defined method"
+        end 
+    end 
+end 
+
+my=Mymodule::Test.new 
+my.mymethod
+
+
+#to call class in a module we need to use ::

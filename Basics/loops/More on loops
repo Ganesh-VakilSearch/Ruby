@@ -1,0 +1,52 @@
+#until condition executes if condition is false
+i=0 
+num=5 
+until i>num do 
+    puts "inside the loop i= #{i}"
+    i+=1
+    
+end
+puts "-------------------------------"
+
+
+
+#until modifier 
+i=0 
+num=5 
+begin
+    puts "inside the loop i= #{i}"
+    i+=1
+    
+end until i>num
+
+puts("-----------------------")
+
+
+
+8.times do |i| puts "hello: #{i}" end
+                  or
+#without end
+8.times {|i| puts "hello : #{i}"}
+
+#Upto
+1.upto(7)  {|i| puts "hello: #{i}"}
+
+#downto
+puts "-----------------"
+9.downto(-7)  {|i| puts "hello: #{i}"}
+
+#step size
+0.step(25,5) {|i| puts "hello: #{i}"}
+
+
+puts "-------------"
+
+for r in 1..5
+    for c in 1..5
+        print("#{c} ")
+    end
+    puts()
+end
+
+
+
